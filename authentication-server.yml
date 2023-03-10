@@ -7,9 +7,9 @@ spring.messages.basename: messages/messages
 
 
 spring:
-  main:
-    web-application-type: reactive
-    allow-bean-definition-overriding: true
+  #main:
+    #web-application-type: reactive
+    #allow-bean-definition-overriding: true
   #zipkin:
     #baseUrl: http://tracing-server:9411
   datasource:
