@@ -13,7 +13,7 @@ eureka:
     instance-id: ${spring.application.name}:${random.uuid}
   # standalone mode
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
