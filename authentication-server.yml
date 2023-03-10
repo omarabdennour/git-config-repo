@@ -7,6 +7,8 @@ spring.messages.basename: messages/messages
 
 
 spring:
+  main:
+    web-application-type: reactive
   #zipkin:
     #baseUrl: http://tracing-server:9411
   datasource:
