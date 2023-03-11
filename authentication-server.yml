@@ -5,8 +5,11 @@ server:
 # Internationalization
 spring.messages.basename: messages/messages
 
-
+    
 spring:
+  config:
+    activate:
+      on-profile: default
   main:
     #web-application-type: reactive
     allow-bean-definition-overriding: true
@@ -61,7 +64,6 @@ eureka:
       defaultZone: http://discovery-server:8761/eureka/
       
       
-      
 ################### App  variables  #########################
 
 app:
@@ -103,3 +105,19 @@ minio:
   bucketName: mybucket
   
 localFileFolder: C:\test\\files\\
+
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+  #zipkin:
+    #: http://tracing-server:9411
+#server:
+  #port: 8081
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/
