@@ -7,6 +7,8 @@ spring.messages.basename: messages/messages
 
     
 spring:
+  profiles:
+    active:  mysql,default
   main:
     #web-application-type: reactive
     allow-bean-definition-overriding: true
