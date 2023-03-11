@@ -7,9 +7,6 @@ spring.messages.basename: messages/messages
 
     
 spring:
-  config:
-    activate:
-      on-profile: default
   main:
     #web-application-type: reactive
     allow-bean-definition-overriding: true
