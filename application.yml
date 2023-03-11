@@ -56,8 +56,6 @@ management:
         enabled: true
 
 
-
-
 ################### App  variables  #########################
 
 app:
