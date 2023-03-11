@@ -8,6 +8,9 @@ server:
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 spring:
+  config:
+    activate:
+      on-profile: hsqldb
   sql:
     init:
       schema-locations: classpath*:db/hsqldb/schema.sql
@@ -71,6 +74,7 @@ chaos:
       repository: false
       rest-controller: false
       service: false
+
 
 ---
 spring:
