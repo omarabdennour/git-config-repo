@@ -84,8 +84,13 @@ spring:
     url: jdbc:mysql://${MYSQL_HOST:localhost:3306}/zibra_${spring.application.name}_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: my_secret_password
-  sql:
-    init:
-      schema-locations: classpath*:db/mysql/schema.sql
-      data-locations: classpath*:db/mysql/data.sql
-      init: ALWAYS
+  jpa:
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update  #none #drop #create #create-only #create-drop #update #validate
+#  sql:
+#    init:
+#      schema-locations: classpath*:db/mysql/schema.sql
+#      data-locations: classpath*:db/mysql/data.sql
+#      init: ALWAYS
