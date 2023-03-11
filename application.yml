@@ -90,8 +90,10 @@ spring:
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update  #none #drop #create #create-only #create-drop #update #validate
-#  sql:
-#    init:
-#      schema-locations: classpath*:db/mysql/schema.sql
-#      data-locations: classpath*:db/mysql/data.sql
-#      init: ALWAYS
+  sql:
+    init:
+      mode: always
+#     schema-locations: classpath*:db/mysql/schema.sql
+#     data-locations: classpath*:db/mysql/data.sql      
+    show-sql: false
+  

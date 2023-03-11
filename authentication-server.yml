@@ -1,7 +1,4 @@
 
-server:
-  port: 0
-
 # Internationalization
 spring.messages.basename: messages/messages
 
