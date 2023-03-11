@@ -56,9 +56,6 @@ spring:
 eureka:
   instance:
       instance-id: ${spring.application.name}:${random.uuid}
-  client:
-    serviceUrl:
-      defaultZone: http://discovery-server:8761/eureka/
       
       
 ################### App  variables  #########################
