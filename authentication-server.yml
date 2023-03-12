@@ -70,8 +70,8 @@ spring:
       on-profile: docker
   #zipkin:
     #: http://tracing-server:9411
-#server:
-  #port: 8081
+server:
+  port: 8081
 eureka:
   client:
     serviceUrl:
