@@ -57,12 +57,31 @@ eureka:
           
       
 
-
+    
+################### geoip2 Configuration ##########################   
+geo:
+  ip:
+    lib:
+      enabled: false
+################### cron Configuration ########################## 
+purge:
+  cron:
+    expression: 0 0 1 * * ?
     
 ################### JavaMail Configuration ##########################
 support:
   email: support@gmail.com
- 
+  
+################### minIO Configuration ###########################
+
+minio:
+  endPoint:  http://localhost:9000
+  accessKey: M5cnAKgsq9ZUfpHr
+  secretKey: jiZr3GfrqB21OOWbzyWfdjvfQeG3r85T
+  bucketName: mybucket
+  
+localFileFolder: C:\test\\files\\
+
 
 ---
 spring:
