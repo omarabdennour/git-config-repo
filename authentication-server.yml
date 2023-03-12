@@ -62,7 +62,21 @@ eureka:
 support:
   email: support@gmail.com
  
+################### geoip2 Configuration ##########################   
+geo:
+  ip:
+    lib:
+      enabled: false
+################### cron Configuration ########################## 
+purge:
+  cron:
+    expression: 0 0 1 * * ?
+    
+  
 
+
+
+#######################################################################
 ---
 spring:
   config:
