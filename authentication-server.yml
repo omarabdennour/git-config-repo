@@ -27,7 +27,7 @@ spring:
 #     data-locations: classpath*:db/mysql/data.sql      
     show-sql: false
   mail:
-    host: 172.20.0.2
+    host: localhost
     port: 1025
     protocol: smtp
     username: ""
