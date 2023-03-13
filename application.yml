@@ -78,7 +78,7 @@ app:
 ################### minIO Configuration ###########################
 
 minio:
-  endPoint:  http://172.23.0.5:9000    ##  172.23.0.5
+  endPoint:  http://localhost:9000    ##  172.23.0.5
   accessKey: M5cnAKgsq9ZUfpHr
   secretKey: jiZr3GfrqB21OOWbzyWfdjvfQeG3r85T
   bucketName: mybucket
