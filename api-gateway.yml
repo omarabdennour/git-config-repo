@@ -6,7 +6,7 @@ zuul:
     visits-service: /visit/**
     customers-service: /customer/**
     api-gateway: /gateway/**
-  #  app-test: /app-test/**
+    app-test: /app-test/**
 
 server:
   port: 9090
