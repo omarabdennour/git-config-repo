@@ -72,7 +72,7 @@ app:
   cors:
     allowed-origins: http://localhost:3000
 
-    
+
 minio:
   endPoint:  http://localhost:9000   
   accessKey: by3DztiTX6g1TAfw
