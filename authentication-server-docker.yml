@@ -30,6 +30,29 @@ spring:
 #     schema-locations: classpath*:db/mysql/schema.sql
 #     data-locations: classpath*:db/mysql/data.sql      
     show-sql: false
+  mail:
+    host: localhost
+    port: 1025
+    protocol: smtp
+    username: ""
+    password: ""
+    templates:
+      path : mail-templates
+    properties:
+      mail:
+        debug: true
+        transport:
+          protocol: smtp
+        smtps:
+          auth: true
+          starttls:
+            enable: true
+            timeout: 8000
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+            timeout: 8000    
 
 
 ################### App  variables  ########################################
@@ -67,7 +90,7 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
 
-######################## Amazon S3 storage ####################################
+########################Amazon S3 Storages####################################
 
 minio:
   endPoint:  http://minio:9000   
