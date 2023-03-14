@@ -2,7 +2,7 @@ zuul:
   prefix: /api
   ignoredServices: '*'
   routes:
-    vets-service: /vet/**
+    authentication-server: /authentication-server/**
     visits-service: /visit/**
     customers-service: /customer/**
     api-gateway: /gateway/**
@@ -17,6 +17,9 @@ server:
 # Internationalization
 spring.messages.basename: messages/messages
 
+eureka:
+  instance:
+      instance-id: ${spring.application.name}:${random.uuid}
 ---
 spring:
   config:
