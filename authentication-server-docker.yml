@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: authentication-server
+  config:
+    activate:
+      on-profile: docker
   #zipkin:
     #: http://tracing-server:9411
   main:
@@ -80,6 +83,9 @@ purge:
     
 ################### Eureka commun config  #########################
 eureka:
+  instance:
+      hostname: localhost
+      instance-id: ${spring.application.name}:${random.uuid}
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
