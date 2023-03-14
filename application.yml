@@ -55,7 +55,10 @@ management:
       prometheus:
         enabled: true
 ################### Eureka commun config  #########################
-
+eureka:
+  instance:
+      hostname: localhost
+      instance-id: ${spring.application.name}:${random.uuid}
 ################### App  variables  #########################
 
 app:
