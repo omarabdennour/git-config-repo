@@ -17,10 +17,6 @@ server:
 # Internationalization
 spring.messages.basename: messages/messages
 
-eureka:
-  instance:
-      instance-id: ${spring.application.name}:${random.uuid}
-      
 ---
 spring:
   config:
@@ -29,9 +25,6 @@ spring:
   #zipkin:
     #baseUrl: http://tracing-server:9411
 eureka:
-  instance:
-      hostname: localhost
-      instance-id: ${spring.application.name}:${random.uuid}
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/

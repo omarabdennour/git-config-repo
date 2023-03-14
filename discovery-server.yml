@@ -12,10 +12,6 @@ env:
     
 
 eureka:
-  instance:
-    hostname: localhost
-    instance-id: ${spring.application.name}:${random.uuid}
-  # standalone mode
   client:
     registerWithEureka: false
     fetchRegistry: false
