@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: authentication-server
+  config:
+    import: configserver:http://config-server:8888
   #zipkin:
     #: http://tracing-server:9411
   main:
