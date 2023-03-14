@@ -55,7 +55,17 @@ eureka:
       instance-id: ${spring.application.name}:${random.uuid}
           
       
+################### App  variables  ########################################
 
+app:    
+  jwt:
+    # Signing key for HS512 algorithm
+    # In http://www.allkeysgenerator.com/ you can generate all kinds of keys
+    secret: v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-JaNdRfUjXn2r5u8x/A?D(G+KbPeShVkYp
+    expiration:
+      minutes: 10
+  cors:
+    allowed-origins: http://localhost:3000
     
 ################### JavaMail Configuration ##########################
 support:
@@ -72,8 +82,6 @@ purge:
     expression: 0 0 1 * * ?
     
   
-
-
 
 #######################################################################
 ---

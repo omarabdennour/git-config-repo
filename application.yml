@@ -64,28 +64,16 @@ app:
       react-ui: ${REACT_UI_URL:http://localhost:3000}
       reac-login-basic:  ${REACT_LOGIN_BASIC_URL:http://localhost:3000/account/login-basic}
       react-login-cover:  ${REACT_LOGIN_COVER_URL:http://localhost:3000/account/login-basic}
-      
-  jwt:
-    # Signing key for HS512 algorithm
-    # In http://www.allkeysgenerator.com/ you can generate all kinds of keys
-    secret: v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-JaNdRfUjXn2r5u8x/A?D(G+KbPeShVkYp
-    expiration:
-      minutes: 10
-  cors:
-    allowed-origins: http://localhost:3000
-    
-    
-################### minIO Configuration ###########################
 
+    
 minio:
-  endPoint:  http://localhost:9000    ##  172.23.0.5
-  accessKey: M5cnAKgsq9ZUfpHr
-  secretKey: jiZr3GfrqB21OOWbzyWfdjvfQeG3r85T
+  endPoint:  http://minio:9000   
+  accessKey: by3DztiTX6g1TAfw
+  secretKey: DlglXeoUqBOrzF5tvwfy4golKb6A6R7i
   bucketName: mybucket
   
-localFileFolder: C:\test\\files\\    
-    
-    
+localFileFolder: C:\test\\files\\ 
+  
 # Chaos Engineering
 ---
 spring:
@@ -104,6 +92,21 @@ chaos:
       service: false
 
 
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+minio:
+  endPoint:  http://minio:9000   
+  accessKey: by3DztiTX6g1TAfw
+  secretKey: DlglXeoUqBOrzF5tvwfy4golKb6A6R7i
+  bucketName: mybucket
+  
+localFileFolder: C:\test\\files\\ 
+    
+    
 ---
 spring:
   config:
@@ -127,4 +130,6 @@ spring:
 #     schema-locations: classpath*:db/mysql/schema.sql
 #     data-locations: classpath*:db/mysql/data.sql      
     show-sql: false
+    
+ 
   
