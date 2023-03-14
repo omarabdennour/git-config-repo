@@ -16,7 +16,7 @@ spring:
     initialization-mode: always
     driver-class-name: com.mysql.cj.jdbc.Driver
     platform: mysql ${MYSQL_HOST:localhost:3306}
-    url: jdbc:mysql://${MYSQL_HOST:localhost:3306}/zibra_${spring.application.name}_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://${MYSQL_HOST:db:3306}/zibra_${spring.application.name}_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: my_secret_password
   jpa:
