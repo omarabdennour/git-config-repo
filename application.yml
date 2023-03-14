@@ -72,14 +72,6 @@ app:
   cors:
     allowed-origins: http://localhost:3000
 
-
-minio:
-  endPoint:  http://localhost:9000   
-  accessKey: by3DztiTX6g1TAfw
-  secretKey: DlglXeoUqBOrzF5tvwfy4golKb6A6R7i
-  bucketName: mybucket
-  
-localFileFolder: C:\test\\files\\ 
   
 # Chaos Engineering
 ---
@@ -99,44 +91,6 @@ chaos:
       service: false
 
 
----
-spring:
-  config:
-    activate:
-      on-profile: docker
-
-minio:
-  endPoint:  http://minio:9000   
-  accessKey: by3DztiTX6g1TAfw
-  secretKey: DlglXeoUqBOrzF5tvwfy4golKb6A6R7i
-  bucketName: mybucket
-  
-localFileFolder: C:\test\\files\\ 
-    
-    
----
-spring:
-  config:
-    activate:
-      on-profile: mysql
-  datasource:
-    initialization-mode: always
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    platform: mysql ${MYSQL_HOST:localhost:3306}
-    url: jdbc:mysql://${MYSQL_HOST:localhost:3306}/zibra_${spring.application.name}_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
-    username: root
-    password: my_secret_password
-  jpa:
-    defer-datasource-initialization: true
-    database-platform: org.hibernate.dialect.MySQLDialect
-    hibernate:
-      ddl-auto: update  #none #drop #create #create-only #create-drop #update #validate
-  sql:
-    init:
-      mode: always
-#     schema-locations: classpath*:db/mysql/schema.sql
-#     data-locations: classpath*:db/mysql/data.sql      
-    show-sql: false
     
  
   
