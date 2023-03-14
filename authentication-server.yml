@@ -1,5 +1,7 @@
 
 spring:
+  application:
+    name: authentication-server
   config:
     activate:
       on-profile: default
