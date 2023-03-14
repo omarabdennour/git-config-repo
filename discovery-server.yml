@@ -15,6 +15,7 @@ eureka:
   instance:
     hostname: localhost
     instance-id: ${spring.application.name}:${random.uuid}
+    prefer-ip-address: true 
   # standalone mode
   client:
     registerWithEureka: false
