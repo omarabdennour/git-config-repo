@@ -20,6 +20,7 @@ spring.messages.basename: messages/messages
 eureka:
   instance:
       instance-id: ${spring.application.name}:${random.uuid}
+      
 ---
 spring:
   config:
