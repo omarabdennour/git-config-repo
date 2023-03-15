@@ -21,8 +21,23 @@ spring:
                locator:
                   enabled: true
                   lower-case-service-id: true    
+ 
+# Internationalization
+spring.messages.basename: messages/messages
 
+################### Eureka commun config  #########################
 eureka:
   instance:
       hostname: localhost
       instance-id: ${spring.application.name}:${random.uuid}
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+  #zipkin:
+    #baseUrl: http://tracing-server:9411
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/
