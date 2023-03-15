@@ -1,0 +1,51 @@
+server:
+  port : ${PORT:9090}
+
+debug: true
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
+
+management:
+   endpoints:
+      web:
+         exposure:
+            include:  "*"
+      health:
+         show-details: ALWAYS
+   endpoint:
+    health:
+      show-details: ALWAYS
+   health:
+      circuitbreakers:
+         enabled: false
+
+spring:
+  profile: dev
+  application:
+    name: api-gateway2
+  profiles:
+    active: default
+  devtools:
+    livereload:
+      port: 35730
+  jmx:
+    enabled: true
+   #zipkin:
+      #base-url:  http://127.0.0.2:9411
+   #sleuth:
+      #reactor:
+         #instrumentation-type: decorate-on-each
+  security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: ${AUTORIZATION_SERVER:http://localhost:9090/authorization-server}
+  cloud:
+        gateway:
+            discovery:
+               locator:
+                  enabled: true
+                  lower-case-service-id: true    
+
