@@ -1,17 +1,16 @@
-zuul:
-  prefix: /api
-  ignoredServices: '*'
-  routes:
-    authentication-server: /authentication-server/**
-    visits-service: /visit/**
-    customers-service: /customer/**
-    api-gateway: /gateway/**
-    app-test: /app-test/**
+#zuul:
+#  prefix: /api
+#  ignoredServices: '*'
+#  routes:
+#    authentication-server: /authentication-server/**
+#    visits-service: /visit/**
+#    customers-service: /customer/**
+#    api-gateway: /gateway/**
+#    app-test: /app-test/**
 
 server:
   port: 9090
  
-
 # Internationalization
 spring.messages.basename: messages/messages
 
