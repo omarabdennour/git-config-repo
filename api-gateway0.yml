@@ -1,32 +1,10 @@
 server:
   port : 9090
 
-debug: true
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty.http.client: DEBUG
-
-management:
-   endpoints:
-      web:
-         exposure:
-            include:  "*"
-      health:
-         show-details: ALWAYS
-   endpoint:
-    health:
-      show-details: ALWAYS
-   health:
-      circuitbreakers:
-         enabled: false
 
 spring:
-  profile: dev
   application:
-    name: api-gateway2
-  profiles:
-    active: default
+    name: api-gateway0
   devtools:
     livereload:
       port: 35730
