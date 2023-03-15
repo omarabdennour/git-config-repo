@@ -37,11 +37,6 @@ spring:
    #sleuth:
       #reactor:
          #instrumentation-type: decorate-on-each
-  security:
-      oauth2:
-        resourceserver:
-          jwt:
-            issuer-uri: ${AUTORIZATION_SERVER:http://localhost:9090/authorization-server}
   cloud:
         gateway:
             discovery:

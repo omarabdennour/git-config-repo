@@ -37,7 +37,7 @@ spring.cloud.refresh.refreshable: false
 
 
 # Logging
-logging.level.org.springframework: TRACE  # INFO
+logging.level.org.springframework: INFO   # TRACE
 
 # Metrics
 management:
